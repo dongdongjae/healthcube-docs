@@ -159,7 +159,7 @@
 >
 > ```bash
 > curl -X 'POST' \
-> 'https://{base_url}/heaan/sample' \
+> 'https://{base_url}/heaan/ana/cvd' \
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
