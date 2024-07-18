@@ -38,3 +38,8 @@ nav:
     - Users: users.md
     - Mydata: mydata.md
     - Heaan: heaan.md
+    - 'Parameta':
+      - Users: parameta_users.md
+      - Wallet: parameta_wallet.md
+      - DIDs: parameta_dids.md
+
