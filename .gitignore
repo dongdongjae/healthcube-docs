@@ -1,0 +1,80 @@
+# built application files
+*.dex
+*.class
+*.dex
+*.pro
+*.suo
+*.o
+*.pc
+*.sbr
+gen/
+out/
+
+# Android Studio
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/datasources.xml
+.idea/libraries
+
+# External OS-specific files
+.DS_Store
+Thumbs.db
+
+# For Python dev.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Compiled Python files
+*.pyc
+
+# Python virtual environments
+venv/
+env/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile
+Pipfile.lock
+
+# mypy
+.mypy_cache/
+
+# Django
+*.log
+db.sqlite3
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# Pytest
+__pycache__/
+*.pyc

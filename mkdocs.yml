@@ -1,0 +1,40 @@
+site_name: HealthCube
+theme:
+  name: 'material'
+  palette:
+    - scheme: default
+      primary: deep blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep blue
+      toggle:
+        icon: material/weather-night 
+        name: Switch to light mode
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate 
+  font:
+    text: Noto Sans Korean
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+
+nav:
+    - Token : token.md
+    - Users: users.md
+    - Mydata: mydata.md
+    - Heaan: heaan.md
