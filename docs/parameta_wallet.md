@@ -17,7 +17,7 @@ network_info_id가 2인 `lisbon` network에 `wallet name`으로 wallet을 만듭
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "net_info",
+>         "action": "create_wallet",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
 >             "wallet_name": "my wallet",
@@ -57,7 +57,7 @@ wallet의 정보를 조회합니다.
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "net_info",
+>         "action": "wallet_info",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
 >             "wallet_id": 93,
@@ -85,7 +85,8 @@ wallet의 정보를 조회합니다.
 
 ## Get Coin
 
-`dev`계정으로부터 코인을 받습니다.
+`dev`계정으로부터 코인을 받습니다.  
+`receiver_wallet_address`는 코인을 받는 wallet의 주소입니다.
 
 > Request:
 >
@@ -97,7 +98,7 @@ wallet의 정보를 조회합니다.
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "net_info",
+>         "action": "request_coin",
 >         "param": {
 >             "receiver_wallet_address": "hxc3a9ed829a552f543f4447ca8c8f482cadb3d3e3",
 >             "coin_value": 1
@@ -176,7 +177,7 @@ wallet의 코인 잔고를 조회합니다.
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "coin_balance",
+>         "action": "transfer_tx",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
 >             "wallet_id": 93,
@@ -216,7 +217,7 @@ wallet의 코인 잔고를 조회합니다.
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "coin_balance",
+>         "action": "message_tx",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
 >             "wallet_id": 93,
@@ -256,7 +257,7 @@ txhash 로 transaction result 를 조회합니다.
 > -d '{
 >     "id": 1,
 >     "request": {
->         "action": "coin_balance",
+>         "action": "tx_info",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
 >             "txhash": "0x541b18cda8b33509d7c9d1fda30fe8d30e1126eeb4a0d0d873698917f409d128"
