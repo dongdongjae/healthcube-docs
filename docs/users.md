@@ -8,7 +8,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "name": "홍길동"
 > }'
 > ```
@@ -20,6 +20,7 @@
 > Content-Type: application/json
 >
 > {
+ > "id" : 1,
 >  "project_code": "snuh-healthcube",
 >  "name": "홍길동",
 >  "birthdate": "1990-01-01",

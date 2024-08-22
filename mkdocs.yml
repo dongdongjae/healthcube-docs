@@ -39,7 +39,9 @@ nav:
     - Mydata: mydata.md
     - Heaan: heaan.md
     - 'Parameta':
-      - Users: parameta_users.md
-      - Wallet: parameta_wallet.md
-      - DIDs: parameta_dids.md
+      - Overview : parameta/overview.md 
+      - Users: parameta/parameta_users.md
+      - Wallet: parameta/parameta_wallet.md
+      - DIDs: parameta/parameta_dids.md
+      - PDS: parameta/parameta_pds.md
 

@@ -25,9 +25,16 @@
 > {
 >  "id": 1,
 >  "name": "홍길동",
->  "detail": "User login successful"
+>  "detail": "User login successful",
+>  "parameta": {
+>    "username": "user0001@healthcube",
+>    "password": "user0001athealthcube"
+>   }
 > }
 >
 > ```
+>
+> `parameta.username`과 `parameta.password`는 Parameta API 로그인 할 때 사용되는 사용자 정보입니다.
 
 <br />
+
