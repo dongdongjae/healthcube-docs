@@ -1,8 +1,8 @@
 # Parameta(블록체인 서비스)
-블록체인 서비스를 요청합니다.  
-블록체인 서비스 계정은 [Healthcube 로그인](../token.md) 시에 전달받은 `username`과 `password`를 사용합니다.  
 
-<br />
+블록체인 서비스를 요청합니다.  
+블록체인 서비스 계정은 [Healthcube 로그인](../token.md) 시에 전달받은 `username`과 `password`를 사용합니다.
+
 
 ```json
 {
@@ -12,23 +12,43 @@
     "param": {
       "type": "parameta",
       "user_info": {
-        "username": "user0001@healthcube",
+        "username": "user0001@healthcube.snu.ac.kr",
         "password": "user0001athealthcube"
       }
     },
-    "faucet": "yes"
+    "faucet": {
+      "req": "yes",
+      "net": "lisbon",
+      "wallet": "hx5443d0de..."
+    }
   }
 }
 ```
 
-- `id` : Healthcube 로그인 시에 전달받은 사용자 ID  
-- `action` : 서버에 요청하는 블록체인 서비스에 대한 정의  
-- `param` : 블록체인 서비스 요청에 사용되는 데이터  
-- `faucet` : 사용자 wallet의 잔고 확인 여부(잔고 조회 결과, 1보다 적은 경우 코인 전송)
+- `id` : Healthcube 로그인 시에 전달받은 사용자 ID
+- `action` : 서버에 요청하는 블록체인 서비스에 대한 정의
+- `param` : 블록체인 서비스 요청에 사용되는 데이터
+- `faucet` : 사용자 wallet coin balance를 확인하여 남은 잔액이 1보다 적은 경우 코인 발급  
+    - `faucet.req` : Whether to check the coin balance ("yes" or "no")
+    - `faucet.net` : Parameta network name
+    - `faucet.wallet` : Parameta user wallet address  
+
+
+!!! note
+    `faucet.req : "no"` 인 경우, 나머지 parameter(net, wallet)는 빈 문자열 값을 넣어서 요청합니다.
+    ```json
+    "faucet": {
+        "req": "no",
+        "net": "",
+        "wallet": ""
+    }
+    ```
+
 
 <br />
 
 ### 블록체인 서비스 API 종류
+
 1. Wallet 서비스 [⮕](./parameta_wallet.md)
     - `wallet-create`: Wallet 생성
     - `wallet-info`: Wallet 정보 조회

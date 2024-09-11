@@ -39,7 +39,11 @@
 >             "replication_min": 1,
 >             "category": "vc"
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -71,16 +75,17 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 
 > Param Form:
 
-| KEY          | TYPE   | DESCRIPTION                                     |
-| ------------ | ------ | ----------------------------------------------- |
-| token        | string | 파라메타 로그인 토큰                            |
-| wallet_id    | int    | 사용자 wallet ID                                |
-| consumer_did | string | 다운받을 사용자의 DID                           |
-| label_id     | string | Label ID (PDS DATA IDentifier)                  |
-| policy_name  | string | Policy 이름                                     |
-| threshold    | int    | PRE 의 Threshold 값                             |
-| proxy_count  | int    | PRE 에서 사용할 Proxy Node 수                   |
-| expire_at    | string | Policy 유효 기간 timestamp, 예) "1765497600000" |
+| KEY          | TYPE   | DESCRIPTION                                          |
+| ------------ | ------ | ---------------------------------------------------- |
+| token        | string | 파라메타 로그인 토큰                                 |
+| wallet_id    | int    | 사용자 wallet ID                                     |
+| owner_did    | string | Label 소유자의 DID                                   |
+| consumer_did | string | 다운받을 사용자의 DID                                |
+| label_id     | string | Label ID (PDS DATA IDentifier)                       |
+| policy_name  | string | Policy 이름                                          |
+| threshold    | int    | PRE 의 Threshold 값                                  |
+| proxy_count  | int    | PRE 에서 사용할 Proxy Node 수                        |
+| expire_at    | string | Policy 유효 기간 timestamp seconds, 예) "1767139200" |
 
 > Request:
 >
@@ -98,12 +103,17 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 >             "wallet_id": 93,
 >             "label_id": "test_label_id",
 >             "policy_name": "test_policy",
+>             "owner_did": "did:icon:02:06ed65bb5b4d8b1afa754c824484e2da4c39225231c8bf67",
 >             "consumer_did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
 >             "threshold": 1,
 >             "proxy_count": 1,
->             "expire_at": "1765497600000"
+>             "expire_at": "1767139200"
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -149,7 +159,11 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 >             "wallet_id": 93,
 >             "policy_id": "3FBa8..."
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -195,7 +209,11 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 >             "did": "id:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
 >             "wallet_id": 93
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -215,8 +233,8 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 > ```
 >
 > !!! note
-    다운로드 된 데이터는 암호화 되어 있으며, `key_base` 값을 이용하여 복호화 하여야 합니다.
-    > <a href="https://github.com/perme-io/chacha20_decryption_example" target="_blank">데이터복호화 Java Sample</a>
+    다운로드 된 데이터는 암호화 되어 있으며, `key_base` 값을 이용하여 복호화 하여야 합니다.  
+    <a href="https://github.com/perme-io/chacha20_decryption_example" target="_blank">데이터복호화 Java Sample</a>
 
 ## Data List
 
@@ -248,7 +266,11 @@ PDS 데이터 목록을 조회합니다.
 >             "limit": 50,
 >             "offset": 0,
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```

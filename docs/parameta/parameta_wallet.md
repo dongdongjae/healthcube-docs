@@ -19,7 +19,11 @@ network_info_id가 2인 `lisbon` network에 `wallet name`으로 wallet을 만듭
 >             "wallet_name": "my wallet",
 >             "network_info_id": 2,
 >         },
->        "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -60,7 +64,11 @@ wallet의 정보를 조회합니다.
 >             "wallet_id": 93,
 >             "wallet_address": "hxc3a9ed829a552f543f4447ca8c8f482cadb3d3e3",
 >         },
->        "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -101,7 +109,11 @@ wallet의 정보를 조회합니다.
 >             "receiver_wallet_address": "hxc3a9ed829a552f543f4447ca8c8f482cadb3d3e3",
 >             "coin_value": 1
 >         },
->        "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -117,7 +129,7 @@ wallet의 정보를 조회합니다.
 > }
 > ```
 
-## Coin Balace (추후 변경 예정)
+## Coin Balace
 
 wallet의 코인 잔고를 조회합니다.
 
@@ -133,11 +145,14 @@ wallet의 코인 잔고를 조회합니다.
 >     "request": {
 >         "action": "wallet-icx-balance",
 >         "param": {
->             "token": "eyJhbGciOiJIU...",
 >             "wallet_id": 93,
 >             "wallet_address": "hxc3a9ed829a552f543f4447ca8c8f482cadb3d3e3",
 >         },
->        "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -149,13 +164,7 @@ wallet의 코인 잔고를 조회합니다.
 > Content-Type: application/json
 >
 > {
->   "wallet_id": 93,
->   "network_id": "0x2",
->   "network_name": "lisbon",
->   "result": {
->        "stake": "0x0",
->        "unstakes": []
->       }
+>   "result": 6009.6634468875
 > }
 > ```
 

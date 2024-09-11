@@ -19,7 +19,11 @@ User의 DID를 생성합니다.
 >             "wallet_id": 93,
 >             "kid": "my_did"
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -59,7 +63,11 @@ DID 정보를 요청합니다.
 >             "token": "eyJhbGciOiJIU...",
 >             "did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9"
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
@@ -96,7 +104,11 @@ DID 정보를 요청합니다.
 >         "param": {
 >             "token": "eyJhbGciOiJIU..."
 >         },
->         "faucet": "yes"
+>         "faucet": {
+>             "req": "yes",
+>             "net": "lisbon",
+>             "wallet": "hx5443d0de..."
+>         }
 >     }
 > }'
 > ```
