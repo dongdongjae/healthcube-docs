@@ -58,6 +58,10 @@
     - `did-create`: DID 생성
     - `did-info`: DID 정보 조회
     - `did-info-my-all`: (사용자)전체 DID 정보 조회
+    - `vct-info`: VC type 정보 조회
+    - `vct-info-all`: 전체 VC type 정보 조회
+    - `ovc-user-issue`: 사용자 인증 Owner VC 발급
+    - `ovc-research-issue`: 연구참여 동의 Owner VC 발급
 3. PDS 서비스 [⮕](./parameta_pds.md)
     - `pds-up-enc`: PDS 데이터 암호화 업로드
     - `pds-policy-add`: PDS 정책 추가 (제3자에 권한 부여: 데이터 사용 동의)
