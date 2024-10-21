@@ -44,4 +44,4 @@ nav:
       - Wallet: parameta/parameta_wallet.md
       - DIDs: parameta/parameta_dids.md
       - PDS: parameta/parameta_pds.md
-
+    - Flower: flower.md
