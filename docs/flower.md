@@ -23,6 +23,7 @@
 > Content-Type: application/json
 >
 >  {
+>    "file_type": ".tflite",
 >    "basic_model": "HAAAAFRGTD..." // Base64-encoded data
 >  }
 >
@@ -53,6 +54,7 @@
 > Content-Type: application/json
 >
 >  {
+>    "file_type": ".csv",
 >    "sample_data": "c2VwYWwgbG..." // Base64-encoded data
 >  }
 >
