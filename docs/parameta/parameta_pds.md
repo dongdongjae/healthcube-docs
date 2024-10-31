@@ -68,10 +68,7 @@
 
 ## Add Policy
 
-PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
-
-해당 API를 테스트 하는 경우 아래의 DID를 `consumer_did`로 사용하시면 됩니다.  
-`did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9`
+PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.  
 
 > Param Form:
 
