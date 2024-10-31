@@ -164,8 +164,8 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": "1",
-> "sex : "male"
-> "calc_step : "result"
+> "sex : "male",
+> "calc_step : "result",
 > "enc_data : 동형암호로 암호화된 데이터(Base64-encoded data)
 > }'
 > ```
@@ -181,5 +181,53 @@
 > }
 >
 > ```
+
+
+## 동형암호 분석 수행 요청
+
+모바일 앱에서 PDS에 업로드한 데이터에 대해 CVD 위험도를 계산합니다.  
+
+!!! note
+    - 분석 수행 요청을 하기 전에 반드시 분석할 데이터를 [PDS 업로드](./parameta/parameta_pds.md/#data-upload)를 해야하며, 업로드 한 label_id에 대해 [사용자 정책등록](./parameta/parameta_pds.md/#add-policy)을 해야 합니다.
+    - PDS에 업로드할 데이터는 동형암호로 암호화 된 의료정보 입니다.
+
+> Param Form:
+
+| KEY       | TYPE   | DESCRIPTION          |
+| --------- | ------ | -------------------- |
+| id     | int | 사용자 ID |
+| sex | string    | 사용자의 성별     |
+| label_id | string | PDS data label ID |
+| calc_step | Literal['result', 'y', 'risk']| 연산 단계 |
+
+
+
+> Request:
+>
+> ```bash
+> curl -X 'POST' \
+> 'https://{base_url}/heaan/ana/cvd' \
+> -H 'Content-Type: application/json' \
+> -H 'Authorization: Bearer eyJhbG...kDW8' \
+> -d '{
+> "id": "1",
+> "sex : "male",
+> "label_id" : "test_server_male",
+> "calc_step : "result"
+> }'
+> ```
+
+> Response:
+>
+> ```http
+> HTTP/1.1 200 OK
+> Content-Type: application/json
+>
+> {
+>  "res_cal": 0.762...
+> }
+>
+> ```
+
 
 <br />

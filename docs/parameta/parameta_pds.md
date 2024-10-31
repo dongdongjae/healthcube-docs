@@ -80,7 +80,6 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 | token        | string | 파라메타 로그인 토큰                                 |
 | wallet_id    | int    | 사용자 wallet ID                                     |
 | owner_did    | string | Label 소유자의 DID                                   |
-| consumer_did | string | 다운받을 사용자의 DID                                |
 | label_id     | string | Label ID (PDS DATA IDentifier)                       |
 | policy_name  | string | Policy 이름                                          |
 | threshold    | int    | PRE 의 Threshold 값                                  |
@@ -104,7 +103,6 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 >             "label_id": "test_label_id",
 >             "policy_name": "test_policy",
 >             "owner_did": "did:icon:02:06ed65bb5b4d8b1afa754c824484e2da4c39225231c8bf67",
->             "consumer_did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
 >             "threshold": 1,
 >             "proxy_count": 1,
 >             "expire_at": "1767139200"
