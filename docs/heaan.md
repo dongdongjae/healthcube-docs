@@ -206,7 +206,7 @@
 >
 > ```bash
 > curl -X 'POST' \
-> 'https://{base_url}/heaan/ana/cvd' \
+> 'https://{base_url}/heaan/analysis' \
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
