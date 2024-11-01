@@ -16,7 +16,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1"
+> "id": 1
 > }'
 > ```
 
@@ -52,7 +52,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "data_type : "male"
 > }'
 > ```
@@ -79,7 +79,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "data_type : "female"
 > }'
 > ```
@@ -106,7 +106,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "data_type : "enc_male"
 > }'
 > ```
@@ -133,7 +133,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "data_type : "enc_female"
 > }'
 > ```
@@ -163,7 +163,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "sex : "male",
 > "calc_step : "result",
 > "enc_data : 동형암호로 암호화된 데이터(Base64-encoded data)
@@ -210,7 +210,7 @@
 > -H 'Content-Type: application/json' \
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
-> "id": "1",
+> "id": 1,
 > "sex : "male",
 > "label_id" : "test_server_male",
 > "calc_step : "result"
