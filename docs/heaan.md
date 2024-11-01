@@ -53,7 +53,7 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "data_type : "male"
+> "data_type" : "male"
 > }'
 > ```
 
@@ -80,7 +80,7 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "data_type : "female"
+> "data_type" : "female"
 > }'
 > ```
 
@@ -107,7 +107,7 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "data_type : "enc_male"
+> "data_type" : "enc_male"
 > }'
 > ```
 
@@ -134,7 +134,7 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "data_type : "enc_female"
+> "data_type" : "enc_female"
 > }'
 > ```
 
@@ -164,9 +164,9 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "sex : "male",
-> "calc_step : "result",
-> "enc_data : 동형암호로 암호화된 데이터(Base64-encoded data)
+> "sex" : "male",
+> "calc_step" : "result",
+> "enc_data" : 동형암호로 암호화된 데이터(Base64-encoded data)
 > }'
 > ```
 
@@ -211,9 +211,9 @@
 > -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -d '{
 > "id": 1,
-> "sex : "male",
+> "sex" : "male",
 > "label_id" : "test_server_male",
-> "calc_step : "result"
+> "calc_step" : "result"
 > }'
 > ```
 
