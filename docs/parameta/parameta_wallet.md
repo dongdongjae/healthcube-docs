@@ -1,7 +1,8 @@
 ## Create Wallet
 
-Parameta 서비스 User의 wallet을 만듭니다.  
-network_info_id가 2인 `lisbon` network에 `wallet name`으로 wallet을 만듭니다.
+Parameta 서비스 User의 wallet을 `wallet name`으로 만듭니다.
+
+Wallet 생성 요청 시, 서버에서 생성한 wallet이 있다면 해당 wallet을 사용자에게 전달합니다.
 
 > Request:
 >
@@ -61,8 +62,7 @@ wallet의 정보를 조회합니다.
 >         "action": "wallet-info",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
->             "wallet_id": 93,
->             "wallet_address": "hxc3a9ed829a552f543f4447ca8c8f482cadb3d3e3",
+>             "wallet_id": 93
 >         },
 >         "faucet": {
 >             "req": "yes",

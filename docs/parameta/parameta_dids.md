@@ -2,91 +2,115 @@
 
 ## Create DID
 
-User의 DID를 생성합니다.  
-`kid`는 DID의 public key ID 입니다.
+User의 DID를 생성합니다. (`kid`: DID의 public key ID)
 
-> Request:
->
-> ```bash
-> curl -X 'POST' \
-> 'https://{base_url}/parameta/relay' \
-> -H 'Authorization: Bearer eyJhbG...kDW8' \
-> -H 'Content-Type: application/json' \
-> -d '{
->     "id": 1,
->     "request": {
->         "action": "did-create",
->         "param": {
->             "token": "eyJhbGciOiJIU...",
->             "wallet_id": 93,
->             "kid": "my_did"
->         },
->         "faucet": {
->             "req": "yes",
->             "net": "lisbon",
->             "wallet": "hx5443d0de..."
->         }
->     }
-> }'
-> ```
+DID 생성 요청 시, 서버에서 생성한 DID가 있다면 해당 DID을 사용자에게 전달합니다.
 
-> Response:
->
-> ```http
-> HTTP/1.1 200 OK
-> Content-Type: application/json
->
-> {
->   "id": 9781,
->   "did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
->   "kid": "battery",
->   "algorithm": "ES256K",
->   "user_id": 101,
->   "network_info_id": 2
-> }
-> ```
+**Request:**
+
+```bash
+curl -X 'POST' \
+  'https://{base_url}/parameta/relay' \
+  -H 'Authorization: Bearer eyJhbG...kDW8' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "id": 1,
+    "request": {
+        "action": "did-create",
+        "param": {
+            "token": "eyJhbGciOiJIU...",
+            "wallet_id": 93,
+            "kid": "my_did"
+        },
+        "faucet": {
+            "req": "yes",
+            "net": "lisbon",
+            "wallet": "hx5443d0de..."
+        }
+    }
+}'
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+  "user_id": 101,
+  "network_info_id": 2,
+  "did_did_keys": [
+    {
+      "id": 9941,
+      "did": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+      "kid": "my_did",
+      "algorithm": "ES256K"
+    },
+    {
+      "id": 9942,
+      "did": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+      "kid": "PRE",
+      "algorithm": "ES256K"
+    }
+  ]
+}
+```
 
 ## DID Info
 
 DID 정보를 요청합니다.
 
-> Request:
->
-> ```bash
-> curl -X 'POST' \
-> 'https://{base_url}/parameta/relay' \
-> -H 'Authorization: Bearer eyJhbG...kDW8' \
-> -H 'Content-Type: application/json' \
-> -d '{
->     "id": 1,
->     "request": {
->         "action": "did-info",
->         "param": {
->             "token": "eyJhbGciOiJIU...",
->             "did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9"
->         },
->         "faucet": {
->             "req": "yes",
->             "net": "lisbon",
->             "wallet": "hx5443d0de..."
->         }
->     }
-> }'
-> ```
+**Request:**
 
-> Response:
->
-> ```http
-> HTTP/1.1 200 OK
-> Content-Type: application/json
->
-> {
->   "did": "did:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
->   "user_id": 101,
->   "network_id": "0x2",
->   "did_did_keys": [...]
-> }
-> ```
+```bash
+curl -X 'POST' \
+'https://{base_url}/parameta/relay' \
+-H 'Authorization: Bearer eyJhbG...kDW8' \
+-H 'Content-Type: application/json' \
+-d '{
+    "id": 1,
+    "request": {
+        "action": "did-info",
+        "param": {
+            "token": "eyJhbGciOiJIU...",
+            "did": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee"
+        },
+        "faucet": {
+            "req": "yes",
+            "net": "lisbon",
+            "wallet": "hx5443d0de..."
+        }
+    }
+}'
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+  "id": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+  "user_id": 101,
+  "network_info_id": 2,
+  "did_did_keys": [
+    {
+      "id": 9941,
+      "did": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+      "kid": "dids9",
+      "algorithm": "ES256K"
+    },
+    {
+      "id": 9942,
+      "did": "did:icon:02:1e96d53125b5b9a606a8c643f264a2c08959a8a4cdc9a4ee",
+      "kid": "PRE",
+      "algorithm": "ES256K"
+    }
+  ]
+}
+```
 
 ## My All DID Info
 
@@ -287,10 +311,8 @@ VC type 정보를 조회합니다.
 >         "action": "ovc-user-issue",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
->             "vc_id": 3,
 >             "didkey_id": 9781,
->             "wallet_id": 93,
->             "username": "user0001@healthcube.snu.ac.kr"
+>             "wallet_id": 93
 >         },
 >         "faucet": {
 >             "req": "yes",
@@ -333,10 +355,8 @@ VC type 정보를 조회합니다.
 >         "action": "ovc-research-issue",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
->             "vc_id": 4,
 >             "didkey_id": 9781,
 >             "wallet_id": 93,
->             "username": "user0001@healthcube.snu.ac.kr"
 >         },
 >         "faucet": {
 >             "req": "yes",
