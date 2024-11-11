@@ -303,7 +303,6 @@ VC type 정보를 조회합니다.
 > ```bash
 > curl -X 'POST' \
 > 'https://{base_url}/parameta/relay' \
-> -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -H 'Content-Type: application/json' \
 > -d '{
 >     "id": 1,
@@ -347,7 +346,6 @@ VC type 정보를 조회합니다.
 > ```bash
 > curl -X 'POST' \
 > 'https://{base_url}/parameta/relay' \
-> -H 'Authorization: Bearer eyJhbG...kDW8' \
 > -H 'Content-Type: application/json' \
 > -d '{
 >     "id": 1,

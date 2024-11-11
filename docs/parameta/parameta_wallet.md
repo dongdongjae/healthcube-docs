@@ -17,8 +17,7 @@ Wallet 생성 요청 시, 서버에서 생성한 wallet이 있다면 해당 wall
 >         "action": "wallet-create",
 >         "param": {
 >             "token": "eyJhbGciOiJIU...",
->             "wallet_name": "my wallet",
->             "network_info_id": 2,
+>             "wallet_name": "my wallet"
 >         },
 >         "faucet": {
 >             "req": "yes",

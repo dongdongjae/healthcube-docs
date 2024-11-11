@@ -15,6 +15,10 @@ https://healthcube.snu.ac.kr/docs
 
 <br />
 
+
+<span style="font-size: 0.8em;">11월 11일 업데이트</span>  
+<span style="font-size: 0.8em; padding-left: 15px;">1. 사용자 인증 및 연구참여 동의 VC 발급 API 요청 시 header에 토큰을 받지 않도록 변경되었습니다.</span>  
+<br />
 <span style="font-size: 0.8em;">11월 6일 업데이트</span>  
 <span style="font-size: 0.8em; padding-left: 15px;">1. 시나리오에 맞게 로그인 과정 수정되었습니다.</span>  
 <span style="font-size: 0.8em; padding-left: 15px;">2. wallet과 did 생성 요청 시, 서버에서 생성한 것이 있다면 새로운 wallet과 did가 생성되지 않습니다.</span>  
