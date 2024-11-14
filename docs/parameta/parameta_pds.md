@@ -13,9 +13,6 @@
 | wallet_id       | int    | 사용할 wallet ID             |
 | did             | string | 사용할 DID                   |
 | label_id        | string | 데이터를 구분할 label_id     |
-| replication_max | int    | BFS에서 복사본 수 최대값     |
-| replication_min | int    | BFS에서 복사본 수 최소값     |
-| category        | string | 파일을 분류할 카테고리       |
 
 > Request:
 >
@@ -34,10 +31,7 @@
 >             "file_name": "upload_file.json",
 >             "wallet_id": 93,
 >             "did": "id:icon:02:e18516c6adb5ac79e014d98ea0b29573d7dc50a92663c8a9",
->             "label_id": "test_label_id",
->             "replication_max": 1,
->             "replication_min": 1,
->             "category": "vc"
+>             "label_id": "test_label_id"
 >         },
 >         "faucet": {
 >             "req": "yes",
@@ -79,9 +73,6 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 | owner_did    | string | Label 소유자의 DID                                   |
 | label_id     | string | Label ID (PDS DATA IDentifier)                       |
 | policy_name  | string | Policy 이름                                          |
-| threshold    | int    | PRE 의 Threshold 값                                  |
-| proxy_count  | int    | PRE 에서 사용할 Proxy Node 수                        |
-| expire_at    | string | Policy 유효 기간 timestamp seconds, 예) "1767139200" |
 
 > Request:
 >
@@ -99,10 +90,7 @@ PDS Data를 다운로드 할 수 있는 사용자 정책을 등록합니다.
 >             "wallet_id": 93,
 >             "label_id": "test_label_id",
 >             "policy_name": "test_policy",
->             "owner_did": "did:icon:02:06ed65bb5b4d8b1afa754c824484e2da4c39225231c8bf67",
->             "threshold": 1,
->             "proxy_count": 1,
->             "expire_at": "1767139200"
+>             "owner_did": "did:icon:02:06ed65bb5b4d8b1afa754c824484e2da4c39225231c8bf67"
 >         },
 >         "faucet": {
 >             "req": "yes",

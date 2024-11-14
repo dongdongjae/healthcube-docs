@@ -15,7 +15,11 @@ https://healthcube.snu.ac.kr/docs
 
 <br />
 
-
+<span style="font-size: 0.8em;">11월 14일 업데이트</span>  
+<span style="font-size: 0.8em; padding-left: 15px;">1. `/parameta/relay` api의 `pds-policy-add`, `pds-up-enc` 요청 파라미터가 변경되었습니다.</span>  
+<span style="font-size: 0.7em; padding-left: 30px;">- `pds-policy-add` : threshold, proxy_count, expire_at을 더 이상 받지 않습니다.</span>  
+<span style="font-size: 0.7em; padding-left: 30px;">- `pds-up-enc`: category, replication_min, replication_max을 더 이상 받지 않습니다.</span>
+<br />
 <span style="font-size: 0.8em;">11월 11일 업데이트</span>  
 <span style="font-size: 0.8em; padding-left: 15px;">1. 사용자 인증 및 연구참여 동의 VC 발급 API 요청 시 header에 토큰을 받지 않도록 변경되었습니다.</span>  
 <br />
